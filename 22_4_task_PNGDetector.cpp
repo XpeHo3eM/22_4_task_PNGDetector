@@ -34,7 +34,7 @@ int main()
         // Необходима проверка первых 4 байт на корректность png
         char tmp[4];
         file.read(tmp, sizeof(tmp));
-        if (fileExtension(path) && (int)tmp[0] == -119 && tmp[1] == 'P' && tmp[2] == 'N' && tmp[3] == 'G')
+        if (fileExtension(path) && tmp[0] == -119 && tmp[1] == 'P' && tmp[2] == 'N' && tmp[3] == 'G')
             std::cout << "File is png" << std::endl;
         else
             std::cout << "File is not png" << std::endl;
